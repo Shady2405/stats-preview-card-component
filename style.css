@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    
+}
+body{
+    background-color:  hsl(233, 47%, 7%);
+}
+.bigcontainer{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 1150px;
+    background-color:  hsl(244, 38%, 16%);
+}
+.first{
+    
+    width: 100%;
+    padding: 5rem 0 0 5rem;
+}
+.first h1 {
+    font-size: 43px;
+    font-family: "Lexend Deca", sans-serif;
+}
+p{
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+.first h1 span {
+    color: hsl(277, 64%, 61%);
+}
+.image{
+    position: relative;
+}
+.image img{
+    height: 100%;
+    width: 540px;
+}
+.image::after{
+    content: "";
+    background-color: hsl(277, 64%, 61%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    mix-blend-mode: overlay;
+}
+.line-h{
+    line-height: 25px;
+    font-size: 16px;
+    width: 400px;
+}
+.nums{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 100px;
+}
+.nums h2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.nums p{
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.6);
+    padding-top: 10px;
+    font-family: "Lexend Deca", sans-serif;
+}
+@media screen and (max-width:1170px) {
+    .container{
+        width: 80%;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .image img{
+        width: 100%;
+        display: none;
+    }
+    .hide{
+        display: block !important;
+    }
+}
+.hide{
+    display: none;
+}
+@media screen and (max-width:765px) {
+    
+    .first{
+        padding: 3rem;
+        text-align: center;
+    }
+    .line-h{
+        width: 100%;
+    }
+    .nums{
+        margin: 0;
+    }
+}
+@media screen and (max-width:480px) {
+    .container{
+        width: 90%;
+    }
+    .nums{
+        flex-direction: column;
+    }
+    .nums h2{
+        margin-top: 50px;
+    }
+}
+
